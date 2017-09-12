@@ -14,14 +14,15 @@ import Nothing from './components/nothing';
 import reducer from './components/reducers';
 import TestComponent from './components/TestComponent';
 import CheckboxWithLabel from './components/CheckboxWithLabel';
+import {ContainerForCheckbox} from "./components/ContainerForCheckbox";
 
 const store = createStore(reducer)
 
 const App = () => (
     <Provider store={store}>
         <div>
-            <CheckboxWithLabel labelOn="hoera" labelOff="kuthoer"></CheckboxWithLabel>
-          </div>
+            <ContainerForCheckbox/>
+        </div>
     </Provider>
 );
 

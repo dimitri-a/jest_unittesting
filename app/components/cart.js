@@ -30,7 +30,6 @@ import Products from './products';
 import {bindActionCreators} from 'redux'
 import * as AddActions from './actions/addaction'
 
-
 export class Cart extends Component {
 
     constructor(props) {

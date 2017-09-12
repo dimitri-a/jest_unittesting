@@ -1,4 +1,4 @@
-export default function cart(state=[],action){
+export default function cart(state=[{id:1,name:'name',completed:true}],action){
     switch (action.type) {
         case "ADD":
 
