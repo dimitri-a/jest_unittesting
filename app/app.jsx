@@ -20,9 +20,8 @@ const store = createStore(reducer)
 const App = () => (
     <Provider store={store}>
         <div>
-            <CheckboxWithLabel labelOn="in the house" labelOff="u farked" ></CheckboxWithLabel>
-            <TestComponent></TestComponent>
-        </div>
+            <CheckboxWithLabel labelOn="hoera" labelOff="kuthoer"></CheckboxWithLabel>
+          </div>
     </Provider>
 );
 
