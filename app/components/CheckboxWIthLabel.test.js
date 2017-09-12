@@ -12,7 +12,7 @@ it('CheckboxWithLabel changes the text after click', () => {
 
     expect(checkbox.text()).toEqual('Off');
 
-    //checkbox.find('input').simulate('change');
+    checkbox.find('input').simulate('change');
 
 
     expect(checkbox.text()).toEqual('On');
