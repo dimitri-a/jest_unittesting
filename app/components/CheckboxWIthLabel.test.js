@@ -15,11 +15,12 @@ it('CheckboxWithLabel changes the text after click', () => {
     expect(cb.text()).toEqual('uit');
 
     //todo expect(wrapper.find('div.some-class')).to.have.length(3);
+    //todo type 4 simulate
     cb.find('input').simulate('change');
 
-    console.log('cb.fin',cb.find('input'));
-
-    //todo type 6 length of component
+    //todo type 6 length of component/element
     expect(cb.find('input').length).toEqual(1);
 
 });
+
+
