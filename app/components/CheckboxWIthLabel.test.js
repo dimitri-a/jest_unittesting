@@ -8,7 +8,8 @@ import CheckboxWithLabel from './CheckboxWithLabel';
 
 it('CheckboxWithLabel toggles the label after check', () => {
 
-    let cb = shallow(<CheckboxWithLabel labelOff="uit" labelOn="aan"/>)
+    //todo question how to mock/reference this onchange
+    let cb = shallow(<CheckboxWithLabel labelOff="uit" labelOn="aan" onChange={ () => Promise.resolve()} />)
 
     console.log('cb.debug()=',cb.debug());
 
@@ -22,6 +23,9 @@ it('CheckboxWithLabel toggles the label after check', () => {
 
 
     cb.find('input').simulate('change');
+
+    console.log('props=',props);
+    expect(props.onChange).toBeCalled()
 
 
     //todo type 6 length of component/element
