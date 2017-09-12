@@ -10,6 +10,7 @@ export class ContainerForCheckbox extends Component {
     }
 
     handleChange = () =>{
+        console.log('handlechange in container');
         this.setState({isChecked:!this.state.isChecked});
     }
 
