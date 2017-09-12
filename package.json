@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress --inline --hot",
-    "test": "jest --watch",
+    "test": "jest --watch --coverage",
     "testnormal": "jest"
   },
   "repository": {

@@ -8,17 +8,20 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import './css/test.css';
 import Cart from './components/cart';
-import { createStore } from 'redux';
+import {createStore} from 'redux';
 import Nothing from './components/nothing';
 
-import reducer from './components/reducers'
+import reducer from './components/reducers';
+import TestComponent from './components/TestComponent';
+import CheckboxWithLabel from './components/CheckboxWithLabel';
 
 const store = createStore(reducer)
 
 const App = () => (
     <Provider store={store}>
         <div>
-           <Nothing></Nothing>
+            <CheckboxWithLabel labelOn="On" labelOff="Off" ></CheckboxWithLabel>
+            <TestComponent></TestComponent>
         </div>
     </Provider>
 );
