@@ -7,12 +7,19 @@ import {shallow} from 'enzyme';
 import CheckboxWithLabel from './CheckboxWithLabel';
 
 it('CheckboxWithLabel changes the text after click', () => {
-    // Render a checkbox with label in the document
-    const checkbox = shallow(<CheckboxWithLabel labelOn="On" labelOff="Off" />);
 
-    expect(checkbox.text()).toEqual('Off');
+    let cb = shallow(<CheckboxWithLabel labelOff="uit" labelOn="aan"/>)
 
-    checkbox.find('input').simulate('change');
+    //todo http://airbnb.io/enzyme/docs/api/ReactWrapper/text.html
+    //todo type 2 assert text property
+    expect(cb.text()).toEqual('uit');
 
-    expect(checkbox.text()).toEqual('On');
+    //todo expect(wrapper.find('div.some-class')).to.have.length(3);
+    cb.find('input').simulate('change');
+
+    console.log('cb.fin',cb.find('input'));
+
+    //todo type 6 length of component
+    expect(cb.find('input').length).toEqual(1);
+
 });
