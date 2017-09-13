@@ -9,8 +9,8 @@ import CheckboxWithLabel from './CheckboxWithLabel';
 it('CheckboxWithLabel toggles the label after check', () => {
 
     const props = Object.assign({
-        labelOn: 'aan',
-        labelOff: 'uit',
+        labelOn: 'on',
+        labelOff: 'off',
         onChange: jest.fn()
     });
 
@@ -22,7 +22,7 @@ it('CheckboxWithLabel toggles the label after check', () => {
 
     //todo http://airbnb.io/enzyme/docs/api/ReactWrapper/text.html
     //todo type 2 assert text property
-    expect(cb.text()).toEqual('uit');
+    expect(cb.text()).toEqual('off');
 
 
     //todo expect(wrapper.find('div.some-class')).to.have.length(3);
@@ -35,7 +35,7 @@ it('CheckboxWithLabel toggles the label after check', () => {
    // expect(props.onChange).toBeCalled()
 
     //todo type 6 length of component/element
-    expect(cb.text()).toEqual('aan');
+    expect(cb.text()).toEqual('on');
 
 
 });
