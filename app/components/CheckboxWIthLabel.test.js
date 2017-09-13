@@ -11,12 +11,12 @@ it('CheckboxWithLabel toggles the label after check', () => {
     const props = Object.assign({
         labelOn: 'on',
         labelOff: 'off',
+        isChecked: false,
         onChange: jest.fn()
     });
 
     //todo question how to mock/reference this onchange
     let cb = shallow(<CheckboxWithLabel {...props} />)
-
 
     //console.log('cb.debug()=', cb.debug());
 
@@ -24,18 +24,15 @@ it('CheckboxWithLabel toggles the label after check', () => {
     //todo type 2 assert text property
     expect(cb.text()).toEqual('off');
 
-
     //todo expect(wrapper.find('div.some-class')).to.have.length(3);
     //todo type 4 simulate
-
-
     cb.find('input').simulate('change');
 
     //console.log('cb =====', cb.find('input'));
-   // expect(props.onChange).toBeCalled()
+    expect(props.onChange).toBeCalled()
 
     //todo type 6 length of component/element
-    expect(cb.text()).toEqual('on');
+    // expect(cb.text()).toEqual('on');
 
 
 });
