@@ -15,13 +15,14 @@ import reducer from './components/reducers';
 import TestComponent from './components/TestComponent';
 import CheckboxWithLabel from './components/CheckboxWithLabel';
 import {ContainerForCheckbox} from "./components/ContainerForCheckbox";
+import Scroll from './components/scroll'
 
 const store = createStore(reducer)
 
 const App = () => (
     <Provider store={store}>
         <div>
-            <ContainerForCheckbox/>
+            <Scroll/>
         </div>
     </Provider>
 );
