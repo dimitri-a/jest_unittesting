@@ -1,39 +1,34 @@
 import React, {Component} from 'react';
 
-import InfiniteScroll from 'react-infinite-scroller';
+import Clusterize from 'clusterize.js';
 
-import {names} from '../json/names'
+const rows = [];
+const maxRows = 10000;
+for (let i = 0; i < maxRows; ++i) {
+    rows[i] = (
+        <div style={{borderBottom: '1px solid #f0f0f0', padding: '5px 10px'}}>Item #{i + 1}</div>
+    );
+}
 
-export default class Scroll extends Component {
 
-    constructor(props) {
-        super();
-        this.props = props;
-        this.state = {items: names, viewItems: [], start: 0}
-       this.loadItems();
-    }
-
-    loadItems = () => {
-        this.state.viewItems = this.state.items.slice(this.state.start, this.state.start + 20)
-    }
-
+class Scroll extends Component {
     render() {
+        let display = this.props.names.map
+        (
+            (name) => (
+                <div> {name}</div>
+            )
+        )
+
         return (
-            <InfiniteScroll
-                loadMore={this.loadItems}
-                hasMore={true}
-            >
-                <ul>
-                    {this.state.viewItems.map
-                    (
-                        (item) => (
-                            <li> {item}!</li>
-                        )
-                    )
-                    }
-                </ul>
-            </InfiniteScroll>
+            <div>
+
+                {display}
+
+            </div>
         );
     }
-
 }
+
+
+export default Scroll;

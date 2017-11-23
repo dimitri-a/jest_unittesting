@@ -17,12 +17,14 @@ import CheckboxWithLabel from './components/CheckboxWithLabel';
 import {ContainerForCheckbox} from "./components/ContainerForCheckbox";
 import Scroll from './components/scroll'
 
+import {names} from './json/names'
+
 const store = createStore(reducer)
 
 const App = () => (
     <Provider store={store}>
         <div>
-            <Scroll/>
+            <Scroll names ={names}/>
         </div>
     </Provider>
 );
