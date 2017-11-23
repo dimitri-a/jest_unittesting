@@ -17,14 +17,18 @@ import CheckboxWithLabel from './components/CheckboxWithLabel';
 import {ContainerForCheckbox} from "./components/ContainerForCheckbox";
 import Scroll from './components/scroll'
 
-import {names} from './json/names'
+//import {names} from './json/names'
+//import {hamletScripts} from './json/hamlet-7k-lines'
+import {hamletScripts} from './json/hamlet-500k-lines'
+
+import './css/names.css'
 
 const store = createStore(reducer)
 
 const App = () => (
     <Provider store={store}>
         <div>
-            <Scroll names ={names}/>
+            <Scroll names ={hamletScripts}/>
         </div>
     </Provider>
 );
