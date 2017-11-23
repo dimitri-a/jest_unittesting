@@ -1,11 +1,11 @@
-.scroll {
-    max-height: 375px;
-    overflow: auto;
-    width:300px;
-}
+/*.scroll {*/
+    /*max-height: 375px;*/
+    /*overflow: auto;*/
+    /*width:300px;*/
+/*}*/
 
 #container{
-    height: 500px;
+    height: 200px;
     overflow-y: scroll;
     border: 1px solid black;
 }

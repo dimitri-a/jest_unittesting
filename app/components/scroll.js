@@ -8,22 +8,26 @@ class Scroll extends Component {
         this.state = {position: 0, pageSize: 20, displayedNames: this.props.names.slice(0, 20)}
     }
 
-    next = ()=> {
+    // next = ()=> {
+    //
+    //    // console.log(this);
+    //     this.setState({position: this.state.position + this.state.pageSize},
+    //     () => {
+    //         this.setState({displayedNames: this.props.names.slice(this.state.position,this.state.position+this.state.pageSize)});
+    //     });
+    //
+    // }
 
-       // console.log(this);
+    onScroll = () =>{
+        console.log('onscroll');
         this.setState({position: this.state.position + this.state.pageSize},
-        () => {
-            console.log('this.state.position=',this.state.position);
-            console.log('this.state.pageSize=',this.state.pageSize);
-            //console.log('this.state.pageSize=',this.state.pageSize);
-            console.log('this.props.names=',this.props.names);
-            this.setState({displayedNames: this.props.names.slice(this.state.position,this.state.position+this.state.pageSize)});
-        });
-
+            () => {
+                this.setState({displayedNames: this.props.names.slice(this.state.position,this.state.position+this.state.pageSize)});
+            });
     }
-
+    
     render() {
-        let display = this.props.names.map
+        let display = this.state.displayedNames.map
         (
             (name) => (
                 <div> {name}</div>
@@ -31,12 +35,13 @@ class Scroll extends Component {
         )
 
         return (
-            <div id='container'>
+            <div id='container' onScroll={this.onScroll}>
+                <button onClick={this.next}>next 20</button>
                 <div className="scroll">
-                    {this.state.displayedNames}
+                    {display}
                 </div>
 
-                <button onClick={this.next}>next 20</button>
+
             </div>
         );
     }
