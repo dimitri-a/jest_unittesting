@@ -25,6 +25,7 @@
     "history": "^2.0.0",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
+    "react-lazy-render": "^0.3.0",
     "react-router": "^2.0.0",
     "reactjs": "^1.0.0",
     "style-loader": "^0.18.1",
